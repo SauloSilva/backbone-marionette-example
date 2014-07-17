@@ -6,7 +6,6 @@
 
       @listenTo @layout, 'show', =>
         App.execute 'when:fetched', @items, =>
-          console.log @items
           @itemsRegion()
 
       App.listRegion.show @layout
@@ -20,6 +19,7 @@
 
       @listenTo itemsView, 'childview:item:clicked', (child, args) =>
         console.log child.model.get('name')
+        window.open child.model.get('permalink'), '_blank'
 
     itemsView: ->
       new List.Items
