@@ -1,0 +1,11 @@
+#content
+  %article
+  %section
+
+- content_for :javascript do
+  :javascript
+    $(document).ready(function () {
+      Example.start({
+        environment: '#{ Rails.env }'
+      })
+    })

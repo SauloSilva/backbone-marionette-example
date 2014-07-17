@@ -1,0 +1,7 @@
+%br
+%br
+%br
+
+%a{ href: @permalink }
+  %img{ src: @thumb, width: '180' }
+  = @name
